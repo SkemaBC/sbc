@@ -1,0 +1,372 @@
+
+:root {
+  --primary-color: #00aaff;
+  --secondary-color: #ffcc00;
+  --dark-bg: #000000;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: white;
+}
+
+/* NAVBAR VERSI HERO */
+/* ======= NAVBAR ALT STYLE ======= */
+.navbar-alt {
+  background-color: var(--dark-bg);
+  border-bottom: 2px solid #ffcc00; /* kuning SBC */
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-alt {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+}
+
+.menu-alt a {
+  color: white;
+  margin-left: 1.5em;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu-alt a:hover {
+  color: var(--secondary-color);
+}
+
+.menu-alt {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+
+/* HERO SECTION ala BLACK CLOVER */
+.blackclover-style {
+  background: radial-gradient(#111, #000);
+  padding: 4em 2em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bc-card {
+  background: #111;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.bc-left, .bc-right {
+  flex: 1;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bc-left h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.putih {
+  color: white;
+}
+
+.biru {
+  color: var(--primary-color);
+}
+
+.putih, .biru {
+  padding: 0;
+  margin: 0;
+}
+
+.putih h1, .biru h1 {
+  margin: 0; 
+  line-height: 1;
+}
+
+
+.bc-left p {
+  margin-bottom: 1.5em;
+}
+
+.bc-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.bc-btn {
+  background-color: var(--primary-color);
+  padding: 0.7em 1.2em;
+  color: white;
+  border-radius: 0.5em;
+  text-decoration: none;
+}
+
+.bc-btn:hover {
+  background-color: var(--secondary-color); /* Kuning SBC */
+  color: white;
+  transform: scale(1.05);
+}
+
+.bc-play {
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bc-play-text {
+  margin-left: 0.5em;
+}
+
+.bc-img {
+  width: 100%;
+  height: 250px;
+  background: url('https://lh3.googleusercontent.com/pw/AP1GczPzSB0_wjAQrSvaDSvF1IwbnNjmxWIgZpMffoG4jCEupazESz6H9cokoW_S7l9hOYnolCMr00KblbPz3e7LTC55g66YQyymEPEjR6hXzg6oYt4Dl-OWCQR7ZiVDj3nF2qEHqOC_XAjocClThVp6QvU=w878-h878-s-no-gm?authuser=0') center/contain no-repeat;
+  background-size: contain;
+
+}
+
+.bc-pagination {
+  margin-top: 2em;
+  display: flex;
+  gap: 1em;
+  color: #888;
+}
+
+.bc-pagination .active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.bc-footer {
+  margin-top: 1em;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+
+.tentang {
+  background-color: var(--dark-bg);
+  padding-top: 25px;
+}
+
+.tentang-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2em;
+  border-radius: 1em;
+  backdrop-filter: blur(10px);
+}
+
+.anggota {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.anggota-card {
+  background-color: #222;
+  border-radius: 0.8em;
+  padding: 1em;
+  width: 200px;
+  text-align: center;
+}
+
+.anggota-card img {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 0.5em;
+}
+
+.karya, .prestasi, .dokumentasi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  padding-top: 25px;
+}
+
+.item-prestasi {
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 1em;
+  border-radius: 0.8em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.item-prestasi img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;     /* kalo mau ubah yang ini */
+  object-fit: cover;
+  border-radius: 0.5em;
+  aspect-ratio: 4 / 3;
+}
+
+.item-karya {
+  background-color: #1a1a1a;
+  padding: 1em;
+  border-radius: 0.8em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.item-karya video {
+  width: 100%;
+  max-width: 640px;         /* Batas lebar maksimal */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5em;
+  background-color: #000;
+  margin: 0 auto;
+  display: block;
+}
+
+.dokumentasi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.item-dokumentasi {
+  background-color: #1a1a1a;
+  padding: 1em;
+  border-radius: 0.8em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.item-dokumentasi img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: #000;
+}
+
+.item {
+  background-color: #222;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.home-hero {
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.hero-content {
+  color: white;
+  padding: 2em;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: var(--primary-color);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  padding: 0.8em 1.5em;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5em;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* hamburger tombol */
+.hamburger-alt {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* responsif */
+@media (max-width: 768px) {
+  .hamburger-alt {
+    display: block;
+  }
+
+  .menu-alt {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    right: -100%; /* sembunyi di kanan */
+    height: 100vh;
+    width: 70%;
+    padding: 2em;
+    transition: right 0.4s ease-in-out;
+    z-index: 999;
+  }
+
+  .menu-alt.show {
+    right: 0; /* munculkan dari kanan */
+  }
+
+  .menu-alt a {
+    margin-bottom: 1em;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 0.3em;
+  }
+}
