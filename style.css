@@ -383,7 +383,8 @@ button:hover {
     bottom: 24px;
     right: 24px;
     z-index: 1000;
-    width: 40%;
+    width: 60vw;
+    max-width: 50rem;
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid rgba(255, 204, 0, 0.5);
     border-radius: 12px;
@@ -531,5 +532,9 @@ button:hover {
     color: white;
     text-decoration: none;
     padding-bottom: 0.3em;
+  }
+
+  #chat-box {
+    width: 90%;
   }
 }
