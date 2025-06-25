@@ -39,7 +39,23 @@
       <div class="anggota-card"><h3>Angkatan 2023</h3><p>Informasi singkat.</p></div>
       <div class="anggota-card"><h3>Angkatan 2024</h3><p>Informasi singkat.</p></div>
   </section>
+
+    <!-- Floating chat button in the bottom right corner -->
+  <button id="open-chat-btn">
+      💬
+  </button>
+  <button id="login-btn" style="display:none;">Login Google</button>
+
+  <div id="chat-box" style="display: none;">
+    <button id="logout-btn" style="display:none;">Logout</button>
+    <p id="user-info"></p>
+    <ul id="messages"></ul>
+    <input type="text" id="message-input" placeholder="Ketik pesan...">
+    <button id="send-btn">Kirim</button>
+  </div>
+
   <!-- akhir anggota -->
-     <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="firebase-config.js"></script>
 </body>
 </html>
