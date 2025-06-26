@@ -214,6 +214,20 @@ body {
   margin-bottom: 0.5em;
 }
 
+.blok-angkatan {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.angkatan {
+  color: #00ffff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  /*border-left: 5px solid #00ffff;*/
+  padding-left: 10px;
+}
+
 .karya, .prestasi, .dokumentasi {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -281,6 +295,55 @@ body {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background-color: #000;
+}
+
+.bulan {
+  color: #00ffff;
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  /*border-left: 5px solid #00ffff;*/
+  padding-left: 10px;
+}
+
+.arsip-bulan {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+
+/* Judul kegiatan */
+.judul-kegiatan {
+  color: #00ffff;
+  font-size: 1.2rem;
+  margin: 20px 0 10px;
+  padding-left: 10px;
+  border-left: 3px solid #00ffff;
+}
+
+/* Scroll horizontal per kegiatan */
+.slider-dokumentasi {
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-dokumentasi .item-dokumentasi {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 250px; /* Ukuran tetap besar sesuai desain grid */
+}
+
+.slider-dokumentasi::-webkit-scrollbar {
+  height: 8px;
+}
+
+.slider-dokumentasi::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 10px;
 }
 
 .item {
@@ -502,6 +565,56 @@ button:hover {
   margin: 4px;
 }
 
+/*btn pop up*/
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  max-width: 60vw;  /* lebih kecil dari sebelumnya */
+  max-height: 70vh;
+  padding: 10px;
+}
+
+.popup-content img {
+  max-width: 100%;
+  max-height: 90vw;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Tombol X: kotak, kecil, tebal, mencolok */
+.close-btn {
+  position: fixed;
+  top: 50px;
+  right: 200px;
+  width: 40px;          /* lebar */
+  height: 40px;         /* tinggi, sama dengan lebar = persegi */
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #222; /* kuning SBC */
+  color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 0 8px white;
+  border-radius: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  padding-top: 2px;
+}
+
 /* responsif */
 @media (max-width: 768px) {
   .hamburger-alt {
@@ -536,5 +649,10 @@ button:hover {
 
   #chat-box {
     width: 90%;
+  }
+
+  .close-btn {
+   top: 340px;                /* lebih dekat ke gambar */
+   right: 50px;              /* mendekat ke sisi konten */
   }
 }
